@@ -9,7 +9,6 @@ import Foundation
 
 struct EventURLs {
     static let kAPI_EventAPI = "https://api.seatgeek.com/2/events?client_id="
-    static let kAPI_SATResults = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json"
 }
 
 struct Messages {
