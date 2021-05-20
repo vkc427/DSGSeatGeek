@@ -87,10 +87,10 @@
 		38897826264ED460008DB931 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3848C2DD2656161800EC70D6 /* ViewController+ImageView.swift */,
 				3889783C264EECEF008DB931 /* ViewController.swift */,
 				38897827264ED47D008DB931 /* EventInfoTableViewCell.swift */,
 				3889782B264ED496008DB931 /* EventInfoViewController.swift */,
+				3848C2DD2656161800EC70D6 /* ViewController+ImageView.swift */,
 				3848C2742652EC1E00EC70D6 /* ViewController+Search.swift */,
 			);
 			path = Views;

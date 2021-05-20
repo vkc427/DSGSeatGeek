@@ -117,8 +117,6 @@ class ViewController: UITableViewController {
     private func isExist(string: String?, searchString: String) -> Bool {
         return string?.range(of: searchString, options: .caseInsensitive) != nil
     }
-
-
 }
 
 extension ViewController: EventInfoViewControllerDelegate {
