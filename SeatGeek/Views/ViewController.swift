@@ -16,6 +16,7 @@ class ViewController: UITableViewController {
     @IBOutlet var searchBar: UISearchBar!
     var loadEvent: (() -> Void)?
     var arrayFav: [Int] = []
+    let pulltoRefresh = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +24,22 @@ class ViewController: UITableViewController {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.pulltoRefresh.endRefreshing()
             }
         }
         self.searchBar.delegate = self
+        getEventInfo()
+        addPTR()
+    }
+    
+    func addPTR() {
+        tableView.addSubview(pulltoRefresh)
+        pulltoRefresh.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+        pulltoRefresh.tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
+        pulltoRefresh.attributedTitle = NSAttributedString(string: "Fetching Event Data")
+    }
+    
+    @objc private func refreshData(_ sender: Any) {
         getEventInfo()
     }
     
