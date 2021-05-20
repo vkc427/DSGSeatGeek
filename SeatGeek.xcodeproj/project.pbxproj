@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3848C2752652EC1E00EC70D6 /* ViewController+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C2742652EC1E00EC70D6 /* ViewController+Search.swift */; };
 		3848C2782653053700EC70D6 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C2772653053700EC70D6 /* Helper.swift */; };
+		3848C2DE2656161800EC70D6 /* ViewController+ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C2DD2656161800EC70D6 /* ViewController+ImageView.swift */; };
 		388977FF264C0FE8008DB931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388977FE264C0FE8008DB931 /* AppDelegate.swift */; };
 		38897801264C0FE8008DB931 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38897800264C0FE8008DB931 /* SceneDelegate.swift */; };
 		38897806264C0FE8008DB931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38897804264C0FE8008DB931 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		3848C2742652EC1E00EC70D6 /* ViewController+Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Search.swift"; sourceTree = "<group>"; };
 		3848C2772653053700EC70D6 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		3848C2DD2656161800EC70D6 /* ViewController+ImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ImageView.swift"; sourceTree = "<group>"; };
 		388977FB264C0FE8008DB931 /* SeatGeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeatGeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388977FE264C0FE8008DB931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38897800264C0FE8008DB931 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		38897826264ED460008DB931 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3848C2DD2656161800EC70D6 /* ViewController+ImageView.swift */,
 				3889783C264EECEF008DB931 /* ViewController.swift */,
 				38897827264ED47D008DB931 /* EventInfoTableViewCell.swift */,
 				3889782B264ED496008DB931 /* EventInfoViewController.swift */,
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38897841264EED0D008DB931 /* ViewController.swift in Sources */,
+				3848C2DE2656161800EC70D6 /* ViewController+ImageView.swift in Sources */,
 				3889782C264ED496008DB931 /* EventInfoViewController.swift in Sources */,
 				38897832264EDD35008DB931 /* EventObject.swift in Sources */,
 				38897828264ED47D008DB931 /* EventInfoTableViewCell.swift in Sources */,

@@ -70,14 +70,10 @@ class ViewController: UITableViewController {
         let formatter3 = DateFormatter()
         formatter3.dateFormat = "HH:mm E, d MMM y"
         cell.lblEventDate.text = formatter3.string(from: Helper.getDateFromAPIDateString(event?.eventDate) ?? Date())
-//        cell.lblEventDate.text = convertDateFormat(inputDate: event?.eventDate) ?? Messages.Empty
         cell.lblEventLocation.text = event?.venue?.location ?? Messages.Empty
         self.strImage = event?.performers?.first?.image
-        cell.imageView?.imageFromServerURL(urlString: strImage, placeHolderImage: UIImage.init(named: "Placeholder")!)
+        cell.imgEvent?.downloadedFrom(link: self.strImage)
    
-        cell.imageView?.translatesAutoresizingMaskIntoConstraints = false
-        cell.imageView?.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        cell.imageView?.widthAnchor.constraint(equalToConstant: 80).isActive = true
         cell.btnFav.isHidden = true
         for favID in arrayFav {
             if favID == event?.id {
@@ -129,31 +125,6 @@ extension ViewController: EventInfoViewControllerDelegate {
     func favArray(data: Array<Int>) {
         arrayFav = data
     }
-    
-    
 }
 
-
-extension UIImageView {
-
- public func imageFromServerURL(urlString: String, placeHolderImage:UIImage) {
-
-        if self.image == nil{
-              self.image = placeHolderImage
-        }
-
-        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
-            if error != nil {
-                print(error ?? "No Error")
-                return
-            }
-            DispatchQueue.main.async(execute: { () -> Void in
-                let image = UIImage(data: data!)
-                self.image = image
-            })
-
-        }).resume()
-    }
-    
-}
 

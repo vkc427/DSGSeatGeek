@@ -32,7 +32,7 @@ class EventInfoViewController: UIViewController {
         formatter3.dateFormat = "HH:mm E, d MMM y"
         self.lblEventDate.text = formatter3.string(from: Helper.getDateFromAPIDateString(selectedEvent?.eventDate) ?? Date())
         if let strImage = selectedEvent?.performers?.first?.image, !strImage.isEmpty {
-            imgEvent?.imageFromServerURL(urlString: strImage, placeHolderImage: UIImage.init(named: "Placeholder")!)
+            imgEvent?.downloadedFrom(url: URL(string: strImage)!)
         }
         for favID in arrFav {
             if favID == selectedEvent?.id {
