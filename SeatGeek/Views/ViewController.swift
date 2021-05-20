@@ -89,7 +89,7 @@ class ViewController: UITableViewController {
         currentSearchTxt = searchText
         if let searchString = self.currentSearchTxt, searchString.count > 1 {
             let filtered = resultsData.event?.filter({ events -> Bool in
-                if isExist(string: events.name, searchString: searchString) {
+                if isExist(string: events.name, searchString: searchString) || isExist(string: events.venue?.location, searchString: searchString) {
                     return true
                 }
                 return false
